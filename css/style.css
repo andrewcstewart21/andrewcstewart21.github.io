@@ -352,6 +352,8 @@ main {
 .project-finding-text { font-size: 0.98rem; }
 
 .project-link {
+  display: inline-block;
+  margin-top: 4px;
   font-family: var(--font-mono);
   font-size: 0.85rem;
   border-bottom: 1px solid var(--ink);

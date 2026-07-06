@@ -1,4 +1,4 @@
-# Andrew Stewart — Portfolio Site
+# Your Name — Portfolio Site
 
 A clean, single-page portfolio built with plain HTML/CSS/JS — no build tools,
 no npm install, nothing to compile. Just edit the text and push.
@@ -26,6 +26,27 @@ replace:
 
 Drop your résumé PDF into `assets/resume.pdf` — the "Résumé" link in the
 sidebar already points there.
+
+### Adding writing samples / course reports
+
+Each non-thesis project card has a "Read the report →" link at the bottom.
+These already point to specific filenames inside `assets/reports/`:
+
+| Project card              | Expected file                                  |
+|----------------------------|------------------------------------------------|
+| Slip Recovery Training     | `assets/reports/slip-recovery-report.pdf`       |
+| Lower-Limb Exoskeleton     | `assets/reports/exoskeleton-report.pdf`         |
+| XR Object Manipulation     | `assets/reports/xr-object-manipulation-report.pdf` |
+
+Just drop your PDFs into `assets/reports/` using those exact filenames and
+the links will work immediately — no HTML editing needed.
+
+If you'd rather use your own filenames, open `index.html`, find the
+`<a href="assets/reports/...">Read the report →</a>` line under the
+project you want to change, and update the path to match your file.
+
+Want to link to something other than a PDF (a Google Doc, a live demo,
+a GitHub repo)? Just replace that same `href` value with the URL.
 
 ### Adding your photo
 
