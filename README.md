@@ -1,4 +1,4 @@
-# Andrew Stewart — Portfolio Site
+# Your Name — Portfolio Site
 
 A clean, single-page portfolio built with plain HTML/CSS/JS — no build tools,
 no npm install, nothing to compile. Just edit the text and push.
@@ -25,7 +25,23 @@ replace:
 - Education details
 
 Drop your résumé PDF into `assets/resume.pdf` — the "Résumé" link in the
-hero already points there.
+sidebar already points there.
+
+### Adding your photo
+
+Right now the sidebar shows your initials in a circle instead of a photo.
+To use a real photo:
+1. Add an image file to `assets/` (e.g. `assets/photo.jpg`).
+2. In `index.html`, find this block near the top of the sidebar:
+   ```html
+   <div class="avatar" aria-hidden="true">
+     <span class="avatar-initials">YN</span>
+   </div>
+   ```
+3. Replace the `<span>` line with:
+   ```html
+   <img src="assets/photo.jpg" alt="Your Name">
+   ```
 
 ## 2. Preview it locally (optional)
 
