@@ -1,4 +1,4 @@
-# Your Name — Portfolio Site
+# Andrew Stewart — Portfolio Site
 
 A clean, single-page portfolio built with plain HTML/CSS/JS — no build tools,
 no npm install, nothing to compile. Just edit the text and push.
