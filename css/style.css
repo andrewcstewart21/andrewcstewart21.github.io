@@ -361,13 +361,49 @@ main {
 
 .project-link:hover { color: var(--amber); border-color: var(--amber); }
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 22px;
+.scroll-hint {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: -6px 0 14px;
 }
 
-.project-grid .project { margin-bottom: 0; padding: 26px; }
+.project-grid {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 18px; /* room for the scrollbar so it doesn't sit on the cards */
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line) transparent;
+}
+
+.project-grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.project-grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.project-grid::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 100px;
+}
+
+.project-grid::-webkit-scrollbar-thumb:hover {
+  background: var(--amber);
+}
+
+.project-grid .project {
+  flex: 0 0 280px;
+  margin-bottom: 0;
+  padding: 26px;
+  scroll-snap-align: start;
+}
 
 /* Methods */
 .methods {
@@ -460,4 +496,5 @@ main {
 
 @media (max-width: 480px) {
   .project--featured { padding: 26px; }
+  .project-grid .project { flex-basis: 240px; }
 }
