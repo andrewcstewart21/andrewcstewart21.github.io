@@ -451,6 +451,14 @@ main {
   margin: 0 auto 24px;
 }
 
+.contact-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
 .contact-email {
   font-family: var(--font-mono);
   font-size: 1.05rem;
